@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:test_app_volkeno/Connexion.dart';
 // import 'package:flutter_form_bloc/flutter_form_bloc.dart';
 class Inscription extends StatelessWidget {
   @override
@@ -136,12 +137,10 @@ class Inscription extends StatelessWidget {
                 ),
                 color: Color(0xFF18D09D),
                  onPressed: () {
-                  //  if(this.key.currentState.validate()){
-                  //     this.key.currentState.save();
-                  //  }
-                  //  Message message = Message (subject, body);
-                  
-                  // Navigator.pop(context, "Ca marche");
+                   Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Connexion()),
+                  );
                }),
             ),
             SizedBox(
@@ -159,19 +158,7 @@ class Inscription extends StatelessWidget {
                           style: TextStyle(color: Color(0xFF18D09D) , fontSize: 16)),
                     ],
                   ),
-                ),
-              
-              
-                  //  Text(
-                  //       "Deja inscrit ?",
-                  //       style: TextStyle(
-                  //           color: Colors.black,    
-                  //           // Color(Colors."#18D09D"),
-                  //           fontSize: 16
-                  //     ),
-                      
-                  //     ),
-                    
+                ),      
             )
           ],
          ),
