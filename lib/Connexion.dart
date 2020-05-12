@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:test_app_volkeno/Math.dart';
+
+import 'Accueil.dart';
 
 class Connexion extends StatelessWidget {
   @override
@@ -89,7 +92,9 @@ class Connexion extends StatelessWidget {
                 ),
                 color: Color(0xFF18D09D),
                  onPressed: () {
-                   
+                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                         return Math();       
+                    }));
                }),
             ),
             SizedBox(
@@ -103,7 +108,7 @@ class Connexion extends StatelessWidget {
                       TextSpan(
                           text: 'Pas encore de compte ?', style: TextStyle( color: Colors.black,fontSize: 16) ),
                       TextSpan(
-                          text: "S'inscrire",
+                          text: "  S'inscrire",
                           style: TextStyle(color: Color(0xFF18D09D) , fontSize: 16)),
                     ],
                   ),
