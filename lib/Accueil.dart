@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:test_app_volkeno/Galery.dart';
+import 'package:test_app_volkeno/Math.dart';
+import 'package:fluid_layout/fluid_layout.dart';
+// import 'package:example/basic_layout.dart';
+// import 'package:example/columns_complex_fluid_layout.dart';
+// import 'package:example/fluid_layout_with_horizontal_scroll.dart';
+// import 'package:example/sliver_example.dart';
+import 'package:fluid_layout/fluid_layout.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+
+// import 'columns_fluid_layout.dart';
+// import 'conditional_fluid_layout.dart';
+// import 'custom_card.dart';
+// import 'full_fluid_layout.dart';
 
 class Accueil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
+      
     return Scaffold(
       appBar: AppBar(
         title: Image.asset('images/logo.jpg'),
@@ -23,56 +39,76 @@ class Accueil extends StatelessWidget {
               BottomNavigationBarItem(icon: Icon(Icons.folder), title: Text('Support')),
            ]
       ), 
-      body: Container(
-        child: Column(
-           children: <Widget>[
-             new Container(
-               height: 60.0, width: 80.0, color: Colors.green,
-               padding: EdgeInsets.only(left:70),
-              //  padding: Padding(
-              //    padding: EdgeInsets.only(left:30)
-              //    ),
-               ),
-        new Container(
-            height: 40.0, width: 15.0, color: Colors.red),
-        new Container(
-          child: new Text("Category", textAlign: TextAlign.start,
-            style: TextStyle(
-                fontFamily: 'Bold',
-                fontSize: 18.0,
-                color: Colors.black),
-          ),
-          decoration: new BoxDecoration(
-            color: Colors.purple,
-          ),
-          height: 40.0,
-        ),
-              // new Container(
-              //   //  padding: EdgeInsets.all(30),
-                 
-              //    decoration: BoxDecoration(
-              //       border: Border.all(color: Colors.red)
-              //     ),
-  
-              //   //  child: Padding(
-                   
-              //     //  padding: 
-              //     //  child: Container(
-              //     //   // decoration: new BoxDecoration(
-              //     //   //   // borderRadius: BorderRadius.all(Radius.circular(2.3))
-              //     //   // ),
-                    
-              //     //   color: Colors.red,
-              //     //   height:120, width: 120,
-              //     //  ),
-              //   // ),
-                 
-              // ),
-
-              
-           ],
-        )
-      )
+      body: FluidLayout(
+          child: Builder(
+              builder: (context) => CustomScrollView(
+                    slivers: <Widget>[
+                      SliverToBoxAdapter(
+                          child: SizedBox(
+                              height: context.fluid(60, xs: 12, s: 12))),
+                      SliverFluidGrid(
+                        children: [
+                          
+                          FluidCell.withFluidHeight(
+                              
+                              size: context.fluid(3, m: 3, s: 5, xs: 5),
+                              heightSize: context.fluid(3, m: 3, s: 6, xs: 6),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                    bottomRight: Radius.circular(50),
+                                    topRight: Radius.circular(50),
+                                    bottomLeft: Radius.circular(50),
+                                    topLeft: Radius.circular(50)
+                                    ),
+                                 ),
+                                color: Color(0xFF4CCBB6),
+                                child: Column(
+                                children:<Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(top:20.0),
+                                      child: Center(
+                                      child: Icon(Icons.airplanemode_active, color: Colors.white,size: 60,), 
+                                     ),                   
+                                    ),
+                                    Divider(),
+                                  Text("Gaye", style: TextStyle(color:Colors.white, fontSize: 20))
+                                  ] 
+                                ),
+                              )),
+                               FluidCell.withFluidHeight(
+                              
+                              size: context.fluid(3, m: 3, s: 5, xs: 5),
+                              heightSize: context.fluid(3, m: 3, s: 6, xs: 6),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                    bottomRight: Radius.circular(50),
+                                    topRight: Radius.circular(50),
+                                    bottomLeft: Radius.circular(50),
+                                    topLeft: Radius.circular(50)
+                                    ),
+                                 ),
+                                color: Color(0xFF4CCBB6),
+                                child: Column(
+                                children:<Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(top:20.0),
+                                      child: Center(
+                                      child: Icon(Icons.airplanemode_active, color: Colors.white,size: 60,), 
+                                     ),                   
+                                    ),
+                                    Divider(),
+                                  Text("Gaye", style: TextStyle(color:Colors.white, fontSize: 20))
+                                  ] 
+                                ),
+                              )),
+                            ],
+                          ),
+                     ],
+                  ),
+                ), 
+            ),       
       );
   }
 }
