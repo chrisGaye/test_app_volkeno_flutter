@@ -50,7 +50,7 @@ class Accueil extends StatelessWidget {
                         children: [
                           
                           FluidCell.withFluidHeight(
-                              
+              
                               size: context.fluid(3, m: 3, s: 5, xs: 5),
                               heightSize: context.fluid(3, m: 3, s: 6, xs: 6),
                               child: Card(

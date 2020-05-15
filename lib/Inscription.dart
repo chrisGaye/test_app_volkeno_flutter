@@ -11,7 +11,6 @@ class Inscription extends StatelessWidget {
                     child: Form(
                     key: key,
                  child: Column(
-      
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Center(
@@ -20,10 +19,9 @@ class Inscription extends StatelessWidget {
                         child: Image.asset('images/logo.jpg'),
                         ),
                     ),
-                   
                     SizedBox(
                         height: 25,
-                      ), 
+                    ), 
                     Center(
                         child: Text(
                         "Inscrivez-vous",
@@ -40,7 +38,6 @@ class Inscription extends StatelessWidget {
                     Center(
                       child: ListTile(
                          title: TextFormField(
-                           
                           //  keyboardType: TextInputType.text,
                         //  validator: (value) => !value.contains('@') ? "Veuillez saisir un e-mail" : null,
                         //  onSaved: (value) => to = value,

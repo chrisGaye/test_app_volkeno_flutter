@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "912657961686",
+    "firebase_url": "https://test-app-volkeno.firebaseio.com",
+    "project_id": "test-app-volkeno",
+    "storage_bucket": "test-app-volkeno.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912657961686:android:3ed75c553de745dfbaaf77",
+        "android_client_info": {
+          "package_name": "com.example.test_app_volkeno"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912657961686-48dj1o8lsm0186qplo84ioclnr2aujg4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOLa0i3q6obh779tgsKv7Peyld5Dh7_Oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912657961686-48dj1o8lsm0186qplo84ioclnr2aujg4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -46,3 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
+// focusedBorder: OutlineInputBorder(
+//                               borderSide: BorderSide(color: Color(0xFF18D09D), width: 1.0),
+//                             ),
+//                             enabledBorder: OutlineInputBorder(
+//                               borderSide: BorderSide(color: Colors.red, width: 5.0),
+//                               borderRadius: BorderRadius.all(radius),
+//                             ),

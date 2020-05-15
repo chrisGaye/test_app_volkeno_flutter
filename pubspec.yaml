@@ -28,6 +28,8 @@ dependencies:
   font_awesome_flutter:
   flutter_staggered_animations:
   fluid_layout:
+  firebase_auth:
+  cloud_firestore:
 
 
   # The following adds the Cupertino Icons font to your application.
